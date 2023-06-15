@@ -2,13 +2,13 @@ package model;
 
 import util.ObjectBase;
 
-public class Prix_stationnement extends ObjectBase<Prix_stationnement> {
+public class Stationnement extends ObjectBase<Stationnement> {
     private String id;
     private String heure_debut;
     private String heure_fin;
     private double prix;
 
-    public Prix_stationnement() {
+    public Stationnement() {
     }
 
     public String getId() {

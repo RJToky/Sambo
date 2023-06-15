@@ -2,13 +2,13 @@ package model;
 
 import util.ObjectBase;
 
-public class Prix_remorquage extends ObjectBase<Prix_remorquage> {
+public class Remorquage extends ObjectBase<Remorquage> {
     private String id;
     private double augmentation;
     private double tranche;
     private double seuil;
 
-    public Prix_remorquage() {
+    public Remorquage() {
     }
 
     public String getId() {

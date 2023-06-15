@@ -1,6 +1,6 @@
 insert into pavillon values
     (default, 'National', 10000.0),
-    (default, 'Pavillon B', 15000.0)
+    (default, 'International', 15000.0)
 ;
 
 insert into type_navire values
@@ -21,34 +21,26 @@ insert into quai values
 ;
 
 insert into escale values
-    (default, 'navire_001', 'quai_003')
+    (default, 'navire_001', 'quai_003', '2023-06-20 12:00:00', '2023-06-20 14:30:00')
 ;
 
-insert into date_debut values
-    (default, 'escale_001', '2023-06-20 12:00:00', now())
+insert into prevision values
+    (default, 'navire_002', '2023-06-23 15:30:00', '2023-06-23 17:00:00')
 ;
 
-insert into date_fin values
-    (default, 'escale_001', '2023-06-20 14:30:00', now()),
-    (default, 'escale_001', '2023-06-20 14:00:00', now())
+insert into prestation values
+    (default, 'Reparation', 50000.0, 100.0),
+    (default, 'Eau', 10000.0, 50.0)
 ;
 
-insert into reparation_escale values
-    (default, 'escale_001')
+insert into prestation_escale values
+    (default, 'escale_001', 'prestation_001')
 ;
 
-insert into eau_escale values
-    (default, 'escale_001', default)
+insert into stationnement values
+    (default, '00:00:00', '00:15:00', 5000.0)
 ;
 
-insert into prix_reparation values
-    (default, 15000.0, now())
+insert into remorquage values
+    (default, 5.0, 10.0, 1.0)
 ;
-
-insert into prix_eau values
-    (default, 1000.0, now())
-;
-
--- insert into prix_stationnement values
---     (default, 'date1', 'date2', 'prix')
--- ;

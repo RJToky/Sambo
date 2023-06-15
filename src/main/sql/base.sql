@@ -10,8 +10,8 @@ create sequence prevision_id_seq;
 create sequence prestation_id_seq;
 create sequence detail_prestation_id_seq;
 create sequence prestation_escale_id_seq;
-create sequence prix_stationnement_id_seq;
-create sequence prix_remorquage_id_seq;
+create sequence stationnement_id_seq;
+create sequence remorquage_id_seq;
 
 create table pavillon(
     id varchar(50) default concat('pavillon_', to_char(nextval('pavillon_id_seq'), 'FM000')) primary key,
@@ -57,12 +57,7 @@ create table prevision(
 
 create table prestation(
     id varchar(50) default concat('prestation_', to_char(nextval('prestation_id_seq'), 'FM000')) primary key,
-    nom_prestation varchar(20) not null
-);
-
-create table detail_prestation(
-    id varchar(50) default concat('detail_prestation_', to_char(nextval('detail_prestation_id_seq'), 'FM000')) primary key,
-    id_prestation varchar(50) references prestation(id),
+    nom_prestation varchar(20) not null,
     prix_national double precision not null,
     prix_international double precision not null
 );
@@ -73,15 +68,15 @@ create table prestation_escale(
     id_prestation varchar(50) references prestation(id)
 );
 
-create table prix_stationnement(
-    id varchar(50) default concat('prix_stationnement_', to_char(nextval('prix_stationnement_id_seq'), 'FM000')) primary key,
+create table stationnement(
+    id varchar(50) default concat('stationnement_', to_char(nextval('stationnement_id_seq'), 'FM000')) primary key,
     heure_debut time not null,
     heure_fin time not null,
     prix double precision not null
 );
 
-create table prix_remorquage(
-    id varchar(50) default concat('prix_remorquage_', to_char(nextval('prix_remorquage_id_seq'), 'FM000')) primary key,
+create table remorquage(
+    id varchar(50) default concat('remorquage_', to_char(nextval('remorquage_id_seq'), 'FM000')) primary key,
     augmentation double precision not null,
     tranche double precision not null, -- isaky ny firy min
     seuil double precision not null

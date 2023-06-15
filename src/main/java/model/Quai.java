@@ -11,10 +11,21 @@ public class Quai extends ObjectBase<Quai> {
     private String nom_quai;
     private double profondeur;
 
+    public void insertQuai() throws Exception {
+        try (Connection co = ConnectionPostgres.getConnection()) {
+            this.insert(co);
+        }
+    }
+
     public ArrayList<Quai> findAll() throws Exception {
         try (Connection co = ConnectionPostgres.getConnection()) {
             return new Quai().findAll(co);
         }
+    }
+
+    public Quai(String nom_quai, double profondeur) {
+        this.nom_quai = nom_quai;
+        this.profondeur = profondeur;
     }
 
     public Quai() {

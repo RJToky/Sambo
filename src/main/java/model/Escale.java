@@ -1,5 +1,8 @@
 package model;
 
+import java.sql.Connection;
+
+import util.ConnectionPostgres;
 import util.ObjectBase;
 
 public class Escale extends ObjectBase<Escale> {
@@ -8,6 +11,25 @@ public class Escale extends ObjectBase<Escale> {
     private String id_quai;
     private String date_entree;
     private String date_sortie;
+
+    public void insertEscale() throws Exception {
+        try (Connection co = ConnectionPostgres.getConnection()) {
+            this.insert(co);
+        }
+    }
+
+    public static Escale findByLastId() throws Exception {
+        try (Connection co = ConnectionPostgres.getConnection()) {
+            return new Escale().select(co, "select * from escale order by id desc limit 1").get(0);
+        }
+    }
+
+    public Escale(String id_navire, String id_quai, String date_entree, String date_sortie) {
+        this.id_navire = id_navire;
+        this.id_quai = id_quai;
+        this.date_entree = date_entree;
+        this.date_sortie = date_sortie;
+    }
 
     public Escale() {
     }

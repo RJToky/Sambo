@@ -22,6 +22,12 @@ public class V_detail_navire extends ObjectBase<V_detail_navire> {
         }
     }
 
+    public static V_detail_navire findById(String id) throws Exception {
+        try (Connection co = ConnectionPostgres.getConnection()) {
+            return new V_detail_navire().findById(co, id);
+        }
+    }
+
     public V_detail_navire() {
     }
 

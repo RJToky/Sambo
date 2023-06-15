@@ -1,5 +1,8 @@
 package model;
 
+import java.sql.Connection;
+
+import util.ConnectionPostgres;
 import util.ObjectBase;
 
 public class Prevision extends ObjectBase<Prevision> {
@@ -7,6 +10,18 @@ public class Prevision extends ObjectBase<Prevision> {
     private String id_navire;
     private String date_entree;
     private String date_sortie;
+
+    public void insertPrevision() throws Exception {
+        try (Connection co = ConnectionPostgres.getConnection()) {
+            this.insert(co);
+        }
+    }
+
+    public Prevision(String id_navire, String date_entree, String date_sortie) {
+        this.id_navire = id_navire;
+        this.date_entree = date_entree;
+        this.date_sortie = date_sortie;
+    }
 
     public Prevision() {
     }

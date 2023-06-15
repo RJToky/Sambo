@@ -46,7 +46,11 @@
       <% } else if (_page.equalsIgnoreCase("liste_navire")) { %>
         <%@ include file="page/liste_navire.jsp" %>
       <% } else if (_page.equalsIgnoreCase("liste_quai")) { %>
-      <%@ include file="page/liste_quai.jsp" %>
+        <%@ include file="page/liste_quai.jsp" %>
+      <% } else if (_page.equalsIgnoreCase("prevision")) { %>
+        <%@ include file="page/prevision.jsp" %>
+      <% } else if (_page.equalsIgnoreCase("proposition")) { %>
+        <%@ include file="page/proposition.jsp" %>
       <% } %>
     </main>
   </body>

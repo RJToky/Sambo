@@ -6,7 +6,7 @@
 <h1>Choissir un navire</h1>
 <div class="container">
   <% for (V_detail_navire navire : allNavires) { %>
-  <a href="${pageContext.request.contextPath}/EntrerPrevision?id_navire=<%= navire.getId() %>" class="item">
+  <a href="${pageContext.request.contextPath}/Prevision?id_navire=<%= navire.getId() %>" class="item">
     <h2><%= navire.getNom_navire() %></h2>
     <h3><%= navire.getType() %></h3>
     <h4><%= navire.getNom_pavillon() %></h4>

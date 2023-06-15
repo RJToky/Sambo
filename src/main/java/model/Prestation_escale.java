@@ -1,11 +1,25 @@
 package model;
 
+import java.sql.Connection;
+
+import util.ConnectionPostgres;
 import util.ObjectBase;
 
 public class Prestation_escale extends ObjectBase<Prestation_escale> {
     private String id;
     private String id_escale;
     private String id_prestation;
+
+    public void insertPrestation_escale() throws Exception {
+        try (Connection co = ConnectionPostgres.getConnection()) {
+            this.insert(co);
+        }
+    }
+
+    public Prestation_escale(String id_escale, String id_prestation) {
+        this.id_escale = id_escale;
+        this.id_prestation = id_prestation;
+    }
 
     public Prestation_escale() {
     }

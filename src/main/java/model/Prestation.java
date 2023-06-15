@@ -1,12 +1,22 @@
 package model;
 
+import util.ConnectionPostgres;
 import util.ObjectBase;
+
+import java.sql.Connection;
+import java.util.ArrayList;
 
 public class Prestation extends ObjectBase<Prestation> {
     private String id;
     private String nom_prestation;
     private double prix_national;
     private double prix_international;
+
+    public static ArrayList<Prestation> findAll() throws Exception {
+        try (Connection co = ConnectionPostgres.getConnection()) {
+            return new Prestation().findAll(co);
+        }
+    }
 
     public Prestation() {
     }

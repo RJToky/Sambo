@@ -45,6 +45,7 @@
                     <input type="datetime-local" name="date_sortie" id="date_sortie">
                 </div>
             </div>
+            <input type="hidden" name="id_navire" value="<%= navire.getId() %>">
             <div class="field">
                 <button style="width: 215px;">Voir la proposition</button>
             </div>

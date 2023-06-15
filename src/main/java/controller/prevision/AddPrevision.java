@@ -8,6 +8,7 @@ import util.Helper;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Objects;
 
 @WebServlet(name = "AddPrevision", value = "/AddPrevision")
 public class AddPrevision extends HttpServlet {
@@ -17,7 +18,7 @@ public class AddPrevision extends HttpServlet {
         String date_entree = Helper.reformatDateTimeLocal(request.getParameter("date_entree"));
 
         String date_sortie = "";
-        if(request.getParameter("date_sortie") == null) {
+        if(Objects.equals(request.getParameter("date_sortie"), "")) {
             date_sortie = "null";
         } else {
             date_sortie = Helper.reformatDateTimeLocal(request.getParameter("date_sortie"));

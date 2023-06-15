@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page import="model.Quai" %>
 <%@ page import="java.util.ArrayList" %>
 <%
@@ -11,6 +12,7 @@
                 <th>id_quai</th>
                 <th>nom_quai</th>
                 <th>profondeur</th>
+                <th>Etat</th>
             </tr>
         </thead>
         <tbody>
@@ -19,6 +21,7 @@
                 <td><%= quai.getId() %></td>
                 <td><%= quai.getNom_quai() %></td>
                 <td><%= quai.getProfondeur() %> m</td>
+                <td>Occupé</td>
             </tr>
             <% } %>
         </tbody>

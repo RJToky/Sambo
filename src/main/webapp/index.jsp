@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%
     String link = (String) request.getAttribute("link");
     String _page = (String) request.getAttribute("page");
@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta charset="UTF-8" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link href="https://fonts.cdnfonts.com/css/metropolis-2" rel="stylesheet" />
     <title>Sambo</title>

@@ -69,8 +69,8 @@ create table detail_prestation(
 
 create table prestation_escale(
     id varchar(50) default concat('prestation_escale_', to_char(nextval('prestation_escale_id_seq'), 'FM000')) primary key,
-    id_prestation varchar(50) references prestation(id),
-    id_escale varchar(50) references escale(id)
+    id_escale varchar(50) references escale(id),
+    id_prestation varchar(50) references prestation(id)
 );
 
 create table prix_stationnement(

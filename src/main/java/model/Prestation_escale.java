@@ -2,11 +2,12 @@ package model;
 
 import util.ObjectBase;
 
-public class Reparation_escale extends ObjectBase<Reparation_escale> {
+public class Prestation_escale extends ObjectBase<Prestation_escale> {
     private String id;
     private String id_escale;
+    private String id_prestation;
 
-    public Reparation_escale() {
+    public Prestation_escale() {
     }
 
     public String getId() {
@@ -23,6 +24,14 @@ public class Reparation_escale extends ObjectBase<Reparation_escale> {
 
     public void setId_escale(String id_escale) {
         this.id_escale = id_escale;
+    }
+
+    public String getId_prestation() {
+        return id_prestation;
+    }
+
+    public void setId_prestation(String id_prestation) {
+        this.id_prestation = id_prestation;
     }
 
 }

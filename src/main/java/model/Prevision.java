@@ -2,14 +2,13 @@ package model;
 
 import util.ObjectBase;
 
-public class Escale extends ObjectBase<Escale> {
+public class Prevision extends ObjectBase<Prevision> {
     private String id;
     private String id_navire;
-    private String id_quai;
     private String date_entree;
     private String date_sortie;
 
-    public Escale() {
+    public Prevision() {
     }
 
     public String getId() {
@@ -26,14 +25,6 @@ public class Escale extends ObjectBase<Escale> {
 
     public void setId_navire(String id_navire) {
         this.id_navire = id_navire;
-    }
-
-    public String getId_quai() {
-        return id_quai;
-    }
-
-    public void setId_quai(String id_quai) {
-        this.id_quai = id_quai;
     }
 
     public String getDate_entree() {

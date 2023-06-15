@@ -19,7 +19,7 @@ public class AddNavire extends HttpServlet {
         try {
             Navire navire = new Navire(nom_navire, id_type_navire, id_pavillon, profondeur, duree_remorquage);
             navire.insertNavire();
-            response.sendRedirect("/FormInsertNavire");
+            response.sendRedirect("FormInsertNavire");
         } catch (Exception e) {
             e.printStackTrace();
         }

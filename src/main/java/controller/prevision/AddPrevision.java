@@ -6,17 +6,20 @@ import jakarta.servlet.annotation.*;
 import model.Prevision;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet(name = "AddPrevision", value = "/AddPrevision")
 public class AddPrevision extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String id_navire = request.getParameter("id_navire");
-        String date_entree = "";
-        String date_sortie = "";
+        String date_entree = request.getParameter("date_entree");
+        String date_sortie = request.getParameter("date_sortie");
         try {
-            Prevision prevision = new Prevision(id_navire, date_entree, date_sortie);
-            prevision.insertPrevision();
+            PrintWriter out = response.getWriter();
+            out.println("<h1>" + date_entree + "</h1>");
+//            Prevision prevision = new Prevision(id_navire, date_entree, date_sortie);
+//            prevision.insertPrevision();
             response.sendRedirect("/Proposition?id_navire=" + id_navire);
         } catch (Exception e) {
             e.printStackTrace();

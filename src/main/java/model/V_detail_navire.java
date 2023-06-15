@@ -15,6 +15,7 @@ public class V_detail_navire extends ObjectBase<V_detail_navire> {
     private double duree_remorquage;
     private String type;
     private String nom_pavillon;
+    private double prix_pavillon;
 
     public static ArrayList<V_detail_navire> findAll() throws Exception {
         try (Connection co = ConnectionPostgres.getConnection()) {
@@ -93,6 +94,14 @@ public class V_detail_navire extends ObjectBase<V_detail_navire> {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public double getPrix_pavillon() {
+        return prix_pavillon;
+    }
+
+    public void setPrix_pavillon(double prix_pavillon) {
+        this.prix_pavillon = prix_pavillon;
     }
 
 }

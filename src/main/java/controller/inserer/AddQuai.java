@@ -16,7 +16,7 @@ public class AddQuai extends HttpServlet {
         try {
             Quai quai = new Quai(nom_quai, profondeur);
             quai.insertQuai();
-            response.sendRedirect("/FormInsertQuai");
+            response.sendRedirect("FormInsertQuai");
         } catch (Exception e) {
             e.printStackTrace();
         }

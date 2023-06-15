@@ -11,10 +11,9 @@
             <tr>
                 <th>id_navire</th>
                 <th>nom_navire</th>
-                <th>id_type_navire</th>
                 <th>type</th>
-                <th>id_pavillon</th>
                 <th>nom_pavillon</th>
+                <th>prix_pavillon</th>
                 <th>profondeur</th>
                 <th>duree_remorquage</th>
             </tr>
@@ -24,10 +23,9 @@
             <tr>
                 <td><%= navire.getId() %></td>
                 <td><%= navire.getNom_navire() %></td>
-                <td><%= navire.getId_type_navire() %></td>
                 <td><%= navire.getType() %></td>
-                <td><%= navire.getId_pavillon() %></td>
                 <td><%= navire.getNom_pavillon() %></td>
+                <td><%= navire.getPrix_pavillon() %> Ar</td>
                 <td><%= navire.getProfondeur() %> m</td>
                 <td><%= navire.getDuree_remorquage() %> min</td>
             </tr>

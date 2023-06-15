@@ -14,19 +14,34 @@ public class Navire extends ObjectBase<Navire> {
     private double profondeur;
     private double duree_remorquage;
 
-    public ArrayList<Navire> findAll() throws Exception {
+    public void insertNavire() throws Exception {
+        try (Connection co = ConnectionPostgres.getConnection()) {
+            this.insert(co);
+        }
+    }
+
+    public static ArrayList<Navire> findAll() throws Exception {
         try (Connection co = ConnectionPostgres.getConnection()) {
             return new Navire().findAll(co);
         }
     }
 
-    public Navire findById(String id) throws Exception {
+    public static Navire findById(String id) throws Exception {
         try (Connection co = ConnectionPostgres.getConnection()) {
             return new Navire().findById(co, id);
         }
     }
 
     public Navire() {
+    }
+
+    public Navire(String nom_navire, String id_type_navire, String id_pavillon, double profondeur,
+            double duree_remorquage) {
+        this.nom_navire = nom_navire;
+        this.id_type_navire = id_type_navire;
+        this.id_pavillon = id_pavillon;
+        this.profondeur = profondeur;
+        this.duree_remorquage = duree_remorquage;
     }
 
     public String getId() {

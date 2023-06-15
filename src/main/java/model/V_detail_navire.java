@@ -16,7 +16,7 @@ public class V_detail_navire extends ObjectBase<V_detail_navire> {
     private String type;
     private String nom_pavillon;
 
-    public ArrayList<V_detail_navire> findAll() throws Exception {
+    public static ArrayList<V_detail_navire> findAll() throws Exception {
         try (Connection co = ConnectionPostgres.getConnection()) {
             return new V_detail_navire().findAll(co);
         }

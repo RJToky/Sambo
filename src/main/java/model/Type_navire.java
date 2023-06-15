@@ -1,11 +1,21 @@
 package model;
 
+import util.ConnectionPostgres;
 import util.ObjectBase;
+
+import java.sql.Connection;
+import java.util.ArrayList;
 
 public class Type_navire extends ObjectBase<Type_navire> {
     private String id;
     private String type;
     private double prix;
+
+    public static ArrayList<Type_navire> findAll() throws Exception {
+        try (Connection co = ConnectionPostgres.getConnection()) {
+            return new Type_navire().findAll(co);
+        }
+    }
 
     public Type_navire() {
     }

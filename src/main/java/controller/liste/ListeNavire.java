@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class ListeNavire extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            ArrayList<V_detail_navire> allNavires = new V_detail_navire().findAll();
+            ArrayList<V_detail_navire> allNavires = V_detail_navire.findAll();
             request.setAttribute("allNavires", allNavires);
             request.setAttribute("link", "liste");
             request.setAttribute("page", "liste_navire");

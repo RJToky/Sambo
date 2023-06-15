@@ -1,11 +1,21 @@
 package model;
 
+import util.ConnectionPostgres;
 import util.ObjectBase;
+
+import java.sql.Connection;
+import java.util.ArrayList;
 
 public class Pavillon extends ObjectBase<Pavillon> {
     private String id;
     private String nom_pavillon;
     private double prix;
+
+    public static ArrayList<Pavillon> findAll() throws Exception {
+        try (Connection co = ConnectionPostgres.getConnection()) {
+            return new Pavillon().findAll(co);
+        }
+    }
 
     public Pavillon() {
     }

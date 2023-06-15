@@ -1,0 +1,132 @@
+:root {
+  --principal: #2ca8b1;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Metropolis", "Trebuchet MS";
+}
+
+header {
+  display: flex;
+  background-color: var(--principal);
+  box-shadow: 1px 1px 15px #0000000f;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 999;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  height: 60px;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+}
+
+nav > ul > li {
+  position: relative;
+}
+
+nav > ul > li > a {
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  height: 60px;
+  padding: 0px 20px;
+  z-index: 1;
+  font-weight: bold;
+}
+
+nav > ul > li > span {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  background-color: #ffffff26;
+  width: 100%;
+  min-height: 0%;
+  transition: 0.5s;
+}
+
+nav > ul > li:hover span,
+nav > ul > li.active span {
+  min-height: 100%;
+}
+
+nav > ul > li > .dropdown {
+  position: absolute;
+  background-color: white;
+  box-shadow: 1px 1px 15px #0000000f;
+  border-radius: 15px;
+  min-width: 140px;
+  top: 70px;
+  left: 0px;
+  transition: 0.5s;
+  transform: scale(0);
+}
+
+nav > ul > li:hover .dropdown {
+  transform: scale(1);
+}
+
+nav > ul > li > .dropdown > ul {
+  display: flex;
+  flex-direction: column;
+}
+
+nav > ul > li > .dropdown > ul > a {
+  color: var(--principal);
+  padding: 1em 1.5em;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+nav > ul > li > .dropdown > ul > a:first-child {
+  border-radius: 15px 15px 0px 0px;
+  padding: 1.5em 1.5em 1em;
+}
+
+nav > ul > li > .dropdown > ul > a:last-child {
+  border-radius: 0px 0px 15px 15px;
+  padding: 1em 1.5em 1.5em;
+}
+
+nav > ul > li > .dropdown > ul > a:not(:last-child) {
+  border-bottom: 1px solid #2ca8b117;
+}
+
+nav > ul > li > .dropdown > ul > a:hover {
+  background: #2ca8b117;
+}
+
+main {
+  width: 80%;
+  margin: auto;
+  padding-top: 30px;
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    width: 90%;
+  }
+}

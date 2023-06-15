@@ -16,7 +16,6 @@ public class ListeNavire extends HttpServlet {
             request.setAttribute("allNavires", allNavires);
             request.setAttribute("link", "liste");
             request.setAttribute("page", "liste_navire");
-
             request.getRequestDispatcher("index.jsp").forward(request, response);
         } catch (Exception e) {
             e.printStackTrace();

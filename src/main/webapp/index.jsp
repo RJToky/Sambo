@@ -45,6 +45,8 @@
         <%@ include file="page/choix_navire.jsp" %>
       <% } else if (_page.equalsIgnoreCase("liste_navire")) { %>
         <%@ include file="page/liste_navire.jsp" %>
+      <% } else if (_page.equalsIgnoreCase("liste_quai")) { %>
+      <%@ include file="page/liste_quai.jsp" %>
       <% } %>
     </main>
   </body>

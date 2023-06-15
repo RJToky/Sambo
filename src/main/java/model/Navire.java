@@ -14,23 +14,6 @@ public class Navire extends ObjectBase<Navire> {
     private double profondeur;
     private double duree_remorquage;
 
-    // Test
-    public static void main(String[] args) {
-        try (Connection co = ConnectionPostgres.getConnection()) {
-            ArrayList<Navire> allNavire = new Navire().findAll();
-            for (Navire navire : allNavire) {
-                System.out.println(navire.getId() + " " + navire.getNom_navire() + " " + navire.getId_pavillon() + " "
-                        + navire.getProfondeur() + " " + navire.getDuree_remorquage());
-            }
-
-            Navire navire2 = new Navire().findById("navire_002");
-            System.out.println(navire2.getId() + " " + navire2.getNom_navire() + " " + navire2.getId_pavillon() + " "
-                    + navire2.getProfondeur() + " " + navire2.getDuree_remorquage());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     public ArrayList<Navire> findAll() throws Exception {
         try (Connection co = ConnectionPostgres.getConnection()) {
             return new Navire().findAll(co);

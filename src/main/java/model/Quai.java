@@ -1,11 +1,21 @@
 package model;
 
+import util.ConnectionPostgres;
 import util.ObjectBase;
+
+import java.sql.Connection;
+import java.util.ArrayList;
 
 public class Quai extends ObjectBase<Quai> {
     private String id;
     private String nom_quai;
     private double profondeur;
+
+    public ArrayList<Quai> findAll() throws Exception {
+        try (Connection co = ConnectionPostgres.getConnection()) {
+            return new Quai().findAll(co);
+        }
+    }
 
     public Quai() {
     }

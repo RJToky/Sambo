@@ -5,6 +5,7 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 import model.Escale;
 import model.Prestation_escale;
+import util.Helper;
 
 import java.io.IOException;
 
@@ -15,8 +16,8 @@ public class AddEscale extends HttpServlet {
         String id_navire = request.getParameter("id_navire");
         String id_quai = request.getParameter("id_quai");
         String[] id_prestation = request.getParameterValues("id_prestation");
-        String date_entree = "";
-        String date_sortie = "";
+        String date_entree = Helper.reformatDateTimeLocal(request.getParameter("date_entree"));
+        String date_sortie = Helper.reformatDateTimeLocal(request.getParameter("date_sortie"));
         try {
             Escale escale = new Escale(id_navire, id_quai, date_entree, date_sortie);
             escale.insertEscale();
@@ -28,7 +29,7 @@ public class AddEscale extends HttpServlet {
                     prestationEscale.insertPrestation_escale();
                 }
             }
-            response.sendRedirect("/ListeEscale");
+            response.sendRedirect("ListeEscale");
         } catch (Exception e) {
             e.printStackTrace();
         }

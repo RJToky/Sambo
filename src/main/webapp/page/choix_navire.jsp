@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page import="model.V_detail_navire" %>
 <%@ page import="java.util.ArrayList" %>
 <%

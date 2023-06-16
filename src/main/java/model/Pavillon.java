@@ -9,7 +9,6 @@ import java.util.ArrayList;
 public class Pavillon extends ObjectBase<Pavillon> {
     private String id;
     private String nom_pavillon;
-    private double prix;
 
     public static ArrayList<Pavillon> findAll() throws Exception {
         try (Connection co = ConnectionPostgres.getConnection()) {
@@ -34,14 +33,6 @@ public class Pavillon extends ObjectBase<Pavillon> {
 
     public void setNom_pavillon(String nom_pavillon) {
         this.nom_pavillon = nom_pavillon;
-    }
-
-    public double getPrix() {
-        return prix;
-    }
-
-    public void setPrix(double prix) {
-        this.prix = prix;
     }
 
 }

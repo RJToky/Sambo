@@ -6,7 +6,7 @@ drop table escale cascade;
 drop table prestation cascade;
 drop table prestation_escale cascade;
 drop table tarif cascade;
-drop table coefftarif cascade;
+drop table coeff_tarif cascade;
 
 drop sequence pavillon_id_seq cascade;
 drop sequence type_navire_id_seq cascade;
@@ -16,4 +16,4 @@ drop sequence escale_id_seq cascade;
 drop sequence prestation_id_seq cascade;
 drop sequence prestation_escale_id_seq cascade;
 drop sequence tarif_id_seq cascade;
-drop sequence coefftarif_id_seq cascade;
+drop sequence coeff_tarif_id_seq cascade;

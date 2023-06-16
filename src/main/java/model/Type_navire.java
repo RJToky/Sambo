@@ -9,7 +9,6 @@ import java.util.ArrayList;
 public class Type_navire extends ObjectBase<Type_navire> {
     private String id;
     private String type;
-    private double prix;
 
     public static ArrayList<Type_navire> findAll() throws Exception {
         try (Connection co = ConnectionPostgres.getConnection()) {
@@ -34,14 +33,6 @@ public class Type_navire extends ObjectBase<Type_navire> {
 
     public void setType(String type) {
         this.type = type;
-    }
-
-    public double getPrix() {
-        return prix;
-    }
-
-    public void setPrix(double prix) {
-        this.prix = prix;
     }
 
 }

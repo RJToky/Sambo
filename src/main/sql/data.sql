@@ -4,8 +4,8 @@ insert into pavillon values
 ;
 
 insert into type_navire values
-    (default, 'Petrolier', 75000.0),
-    (default, 'Paquebot', 50000.0)
+    (default, 'Petrolier'),
+    (default, 'Paquebot')
 ;
 
 insert into navire values
@@ -24,18 +24,18 @@ insert into escale values
     (default, 'navire_001', 'quai_003', '2023-06-20 12:00:00', '2023-06-20 14:30:00')
 ;
 
-insert into prestation(id, nom_prestation, prix) values
+-----------------------
+insert into prestation(id, nom_prestation, ariary, euro) values
     (default, 'Reparation', 50000.0, 100.0),
     (default, 'Eau', 10000.0, 50.0)
 ;
-
-insert into prestation(id, nom_prestation, lineaire_apartir, augmentation) values
+insert into prestation(id, nom_prestation, lineaire_apartir, tranche) values
     (default, 'Stationnement', 180, 10)
 ;
-
-insert into prestation(id, nom_prestation, augmentation) values
+insert into prestation(id, nom_prestation, tranche) values
     (default, 'Remorquage', 15)
 ;
+-----------------------
 
 insert into prestation_escale values
     (default, 'escale_001', 'prestation_003'),

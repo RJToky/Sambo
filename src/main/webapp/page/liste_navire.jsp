@@ -13,7 +13,6 @@
                 <th>nom_navire</th>
                 <th>type</th>
                 <th>nom_pavillon</th>
-                <th>prix_pavillon</th>
                 <th>profondeur</th>
                 <th>duree_remorquage</th>
             </tr>
@@ -25,7 +24,6 @@
                 <td><%= navire.getNom_navire() %></td>
                 <td><%= navire.getType() %></td>
                 <td><%= navire.getNom_pavillon() %></td>
-                <td><%= navire.getPrix_pavillon() %> Ar</td>
                 <td><%= navire.getProfondeur() %> m</td>
                 <td><%= navire.getDuree_remorquage() %> min</td>
             </tr>

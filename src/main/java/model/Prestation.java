@@ -9,8 +9,10 @@ import java.util.ArrayList;
 public class Prestation extends ObjectBase<Prestation> {
     private String id;
     private String nom_prestation;
-    private double prix_national;
-    private double prix_international;
+    private double ariary;
+    private double euro;
+    private int lineaire_apartir;
+    private int tranche;
 
     public static ArrayList<Prestation> findAll() throws Exception {
         try (Connection co = ConnectionPostgres.getConnection()) {
@@ -37,20 +39,36 @@ public class Prestation extends ObjectBase<Prestation> {
         this.nom_prestation = nom_prestation;
     }
 
-    public double getPrix_national() {
-        return prix_national;
+    public double getAriary() {
+        return ariary;
     }
 
-    public void setPrix_national(double prix_national) {
-        this.prix_national = prix_national;
+    public void setAriary(double ariary) {
+        this.ariary = ariary;
     }
 
-    public double getPrix_international() {
-        return prix_international;
+    public double getEuro() {
+        return euro;
     }
 
-    public void setPrix_international(double prix_international) {
-        this.prix_international = prix_international;
+    public void setEuro(double euro) {
+        this.euro = euro;
+    }
+
+    public int getLineaire_apartir() {
+        return lineaire_apartir;
+    }
+
+    public void setLineaire_apartir(int lineaire_apartir) {
+        this.lineaire_apartir = lineaire_apartir;
+    }
+
+    public int getTranche() {
+        return tranche;
+    }
+
+    public void setTranche(int tranche) {
+        this.tranche = tranche;
     }
 
 }

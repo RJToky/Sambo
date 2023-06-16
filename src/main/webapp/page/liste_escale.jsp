@@ -14,9 +14,9 @@
                 <th>id_navire</th>
                 <th>entree</th>
                 <th>sortie</th>
-                <th>cout (Ar)</th>
-                <th>cout (Dollar)</th>
-                <th>Etat</th>
+<%--                <th>cout (Ar)</th>--%>
+<%--                <th>cout (Dollar)</th>--%>
+<%--                <th>Etat</th>--%>
             </tr>
         </thead>
         <tbody>
@@ -27,9 +27,9 @@
                 <td><%= escale.getId_navire() %></td>
                 <td><%= escale.getDate_entree() %></td>
                 <td><%= escale.getDate_sortie() %></td>
-                <td>20000</td>
-                <td>100</td>
-                <td>sur place</td>
+<%--                <td>20000</td>--%>
+<%--                <td>100</td>--%>
+<%--                <td>sur place</td>--%>
             </tr>
             <% } %>
         </tbody>

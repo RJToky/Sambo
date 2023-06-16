@@ -34,7 +34,7 @@
     </div>
     <div class="prevision">
         <h2>Prévision d'escale</h2>
-        <form action="${pageContext.request.contextPath}/AddPrevision" method="post">
+        <form action="${pageContext.request.contextPath}/Proposition" method="post">
             <div class="date">
                 <div class="field">
                     <label for="date_entree">Date d'entrée</label>

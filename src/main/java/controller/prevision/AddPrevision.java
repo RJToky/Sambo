@@ -7,7 +7,6 @@ import model.Prevision;
 import util.Helper;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Objects;
 
 @WebServlet(name = "AddPrevision", value = "/AddPrevision")

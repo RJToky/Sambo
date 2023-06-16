@@ -6,17 +6,14 @@ create sequence type_navire_id_seq;
 create sequence navire_id_seq;
 create sequence quai_id_seq;
 create sequence escale_id_seq;
-create sequence prevision_id_seq;
 create sequence prestation_id_seq;
-create sequence detail_prestation_id_seq;
 create sequence prestation_escale_id_seq;
-create sequence stationnement_id_seq;
-create sequence remorquage_id_seq;
+create sequence tarif_id_seq;
+create sequence coefftarif_id_seq;
 
 create table pavillon(
     id varchar(50) default concat('pavillon_', to_char(nextval('pavillon_id_seq'), 'FM000')) primary key,
-    nom_pavillon varchar(20) not null,
-    prix double precision not null
+    nom_pavillon varchar(20) not null
 );
 
 create table type_navire(
@@ -48,18 +45,12 @@ create table escale(
     date_sortie timestamp
 );
 
-create table prevision(
-    id varchar(50) default concat('prevision_', to_char(nextval('prevision_id_seq'), 'FM000')) primary key,
-    id_navire varchar(50) references navire(id),
-    date_entree timestamp not null,
-    date_sortie timestamp
-);
-
 create table prestation(
     id varchar(50) default concat('prestation_', to_char(nextval('prestation_id_seq'), 'FM000')) primary key,
     nom_prestation varchar(20) not null,
-    prix_national double precision not null,
-    prix_international double precision not null
+    prix double precision,
+    lineaire_apartir double precision,
+    augmentation_minute int
 );
 
 create table prestation_escale(
@@ -68,16 +59,22 @@ create table prestation_escale(
     id_prestation varchar(50) references prestation(id)
 );
 
-create table stationnement(
-    id varchar(50) default concat('stationnement_', to_char(nextval('stationnement_id_seq'), 'FM000')) primary key,
-    heure_debut time not null,
-    heure_fin time not null,
+create table tarif(
+    id varchar(50) default concat('tarif_', to_char(nextval('tarif_id_seq'), 'FM000')) primary key,
+    id_prestation varchar(50) references prestation(id),
+    id_pavillon varchar(50) references pavillon(id),
+    id_type_navire varchar(50) references type_navire(id),
+    id_quai varchar(50) references quai(id),
+    debut_tranche int not null,
+    fin_tranche int not null,
     prix double precision not null
 );
 
-create table remorquage(
-    id varchar(50) default concat('remorquage_', to_char(nextval('remorquage_id_seq'), 'FM000')) primary key,
-    augmentation double precision not null,
-    tranche double precision not null, -- isaky ny firy min
-    seuil double precision not null
+create table coefftarif(
+    id varchar(50) default concat('coefftarif_', to_char(nextval('coefftarif_id_seq'), 'FM000')) primary key,
+    id_prestation varchar(50) references prestation(id),
+    id_pavillon varchar(50) references pavillon(id),
+    id_type_navire varchar(50) references type_navire(id),
+    id_quai varchar(50) references quai(id),
+    "value" double precision not null
 );

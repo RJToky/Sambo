@@ -1,5 +1,9 @@
 package model;
 
+import java.sql.Connection;
+
+import util.ConnectionPostgres;
+
 public class Proposition {
     private String id_quai;
     private String nom_quai;
@@ -10,8 +14,34 @@ public class Proposition {
     private double cout_remorquage;
     private double montant;
 
-    public Proposition(Prevision prevision) {
+    public Proposition(Prevision prevision) throws Exception {
+        try (Connection co = ConnectionPostgres.getConnection()) {
+            Quai quaiMety = Quai.findQuaiMety(prevision.getId_navire(), prevision.getDate_entree(),
+                    prevision.getDate_sortie());
+            this.setId_quai(quaiMety.getId());
+            this.setNom_quai(quaiMety.getNom_quai());
+            this.setDate_entree(prevision.getDate_entree());
+            this.setDate_sortie(prevision.getDate_sortie());
+            this.setCout_stationnement(co, prevision, quaiMety.getId());
+            this.setCout_remorquage(co, prevision, quaiMety.getId());
+            this.setMontant();
+        }
+    }
 
+    private void setCout_remorquage(Connection co, Prevision prevision, String id_quai) throws Exception {
+        this.cout_remorquage = 0.0;
+    }
+
+    private void setCout_stationnement(Connection co, Prevision prevision, String id_quai) throws Exception {
+        this.cout_stationnement = 0.0;
+    }
+
+    public void setMontant() {
+        this.montant = this.getCout_stationnement() + this.getCout_remorquage();
+    }
+
+    public double getMontant() {
+        return montant;
     }
 
     public Proposition() {
@@ -47,14 +77,6 @@ public class Proposition {
 
     public void setDate_sortie(String date_sortie) {
         this.date_sortie = date_sortie;
-    }
-
-    public double getMontant() {
-        return this.getCout_stationnement() + this.getCout_remorquage();
-    }
-
-    public void setMontant(double montant) {
-        this.montant = montant;
     }
 
     public double getCout_stationnement() {

@@ -49,19 +49,12 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>quai_001</td>
-                        <td>Quai C</td>
-                        <td>2023-06-16 16:00:00</td>
-                        <td>2023-06-16 16:30:00</td>
-                        <td>10000.0</td>
+                        <td><%= proposition.getId_quai() %></td>
+                        <td><%= proposition.getNom_quai() %></td>
+                        <td><%= proposition.getDate_entree() %></td>
+                        <td><%= proposition.getDate_sortie() %></td>
+                        <td><%= proposition.getMontant() %></td>
                     </tr>
-<%--                    <tr>--%>
-<%--                        <td><%= proposition.getId_quai() %></td>--%>
-<%--                        <td><%= proposition.getNom_quai() %></td>--%>
-<%--                        <td><%= proposition.getDate_entree() %></td>--%>
-<%--                        <td><%= proposition.getDate_sortie() %></td>--%>
-<%--                        <td><%= proposition.getMontant() %></td>--%>
-<%--                    </tr>--%>
                 </tbody>
             </table>
         </div>
@@ -88,7 +81,7 @@
                 <thead>
                     <tr>
                         <th>duree_remorquage</th>
-                        <th>montant</th>
+                        <th>montant (Ar/Euro)</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -17,7 +17,8 @@ insert into navire values
 insert into quai values
     (default, 'Quai A', 11.2),
     (default, 'Quai B', 9.8),
-    (default, 'Quai C', 10.6)
+    (default, 'Quai C', 10.6),
+    (default, 'Quai D', 13.0)
 ;
 
 insert into escale values
@@ -40,4 +41,8 @@ insert into prestation(id, nom_prestation, tranche) values
 insert into prestation_escale values
     (default, 'escale_001', 'prestation_003'),
     (default, 'escale_001', 'prestation_004')
+;
+
+insert into tarif values
+    
 ;

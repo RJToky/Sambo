@@ -18,6 +18,7 @@ public class AddEscale extends HttpServlet {
         String[] id_prestation = request.getParameterValues("id_prestation");
         String date_entree = Helper.reformatDateTimeLocal(request.getParameter("date_entree"));
         String date_sortie = Helper.reformatDateTimeLocal(request.getParameter("date_sortie"));
+
         try {
             Escale escale = new Escale(id_navire, id_quai, date_entree, date_sortie);
             escale.insertEscale();

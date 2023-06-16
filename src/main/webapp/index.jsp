@@ -70,8 +70,8 @@
       <% } else if (_page.equalsIgnoreCase("prevision")) { %>
         <%@ include file="page/prevision.jsp" %>
 
-      <% } else if (_page.equalsIgnoreCase("proposition")) { %>
-        <%@ include file="page/proposition.jsp" %>
+      <% } else if (_page.equalsIgnoreCase("proposition_escale")) { %>
+        <%@ include file="page/proposition_escale.jsp" %>
 
       <% } else if (_page.equalsIgnoreCase("form_insert_navire")) { %>
         <%@ include file="page/form_insert_navire.jsp" %>

@@ -14,7 +14,6 @@
                     <th>nom_navire</th>
                     <th>type</th>
                     <th>nom_pavillon</th>
-                    <th>prix_pavillon</th>
                     <th>profondeur</th>
                     <th>duree_remorquage</th>
                 </tr>
@@ -25,7 +24,6 @@
                     <td><%= navire.getNom_navire() %></td>
                     <td><%= navire.getType() %></td>
                     <td><%= navire.getNom_pavillon() %></td>
-                    <td><%= navire.getPrix_pavillon() %> Ar</td>
                     <td><%= navire.getProfondeur() %> m</td>
                     <td><%= navire.getDuree_remorquage() %> min</td>
                 </tr>
@@ -34,7 +32,7 @@
     </div>
     <div class="prevision">
         <h2>Prévision d'escale</h2>
-        <form action="${pageContext.request.contextPath}/Proposition" method="post">
+        <form action="${pageContext.request.contextPath}/PropositionEscale" method="post">
             <div class="date">
                 <div class="field">
                     <label for="date_entree">Date d'entrée</label>
@@ -42,7 +40,7 @@
                 </div>
                 <div class="field">
                     <label for="date_sortie">Date de sortie</label>
-                    <input type="datetime-local" name="date_sortie" id="date_sortie">
+                    <input type="datetime-local" name="date_sortie" id="date_sortie" required>
                 </div>
             </div>
             <input type="hidden" name="id_navire" value="<%= navire.getId() %>">

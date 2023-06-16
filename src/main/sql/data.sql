@@ -43,6 +43,18 @@ insert into prestation_escale values
     (default, 'escale_001', 'prestation_004')
 ;
 
+id varchar(50) default concat('tarif_', to_char(nextval('tarif_id_seq'), 'FM000')) primary key,
+id_prestation varchar(50) references prestation(id),
+id_pavillon varchar(50) references pavillon(id),
+id_type_navire varchar(50) references type_navire(id),
+id_quai varchar(50) references quai(id),
+debut_tranche int not null,
+fin_tranche int not null,
+"value" double precision not null
+
 insert into tarif values
-    
+    (default, 'prestation_003', 'pavillon_001', 'type_navire_001', 'quai_001', 0, 15, 10000.0),
+    (default, 'prestation_003', 'pavillon_001', 'type_navire_001', 'quai_001', 15, 50, 15000.0),
+    (default, 'prestation_003', 'pavillon_001', 'type_navire_001', 'quai_001', 50, 130, 20000.0),
+    (default, 'prestation_003', 'pavillon_001', 'type_navire_001', 'quai_001', 130, 180, 30000.0)
 ;

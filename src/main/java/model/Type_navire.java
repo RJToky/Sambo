@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Type_navire extends ObjectBase<Type_navire> {
     private String id;
-    private String type;
+    private String nom_type;
 
     public static ArrayList<Type_navire> findAll() throws Exception {
         try (Connection co = ConnectionPostgres.getConnection()) {
@@ -27,12 +27,12 @@ public class Type_navire extends ObjectBase<Type_navire> {
         this.id = id;
     }
 
-    public String getType() {
-        return type;
+    public String getNom_type() {
+        return nom_type;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setNom_type(String nom_type) {
+        this.nom_type = nom_type;
     }
 
 }

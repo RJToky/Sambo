@@ -10,7 +10,7 @@ public class Tarif extends ObjectBase<Tarif> {
     private String id_quai;
     private int debut_tranche;
     private int fin_tranche;
-    private double value;
+    private double prix;
 
     public Tarif() {
     }
@@ -71,12 +71,12 @@ public class Tarif extends ObjectBase<Tarif> {
         this.fin_tranche = fin_tranche;
     }
 
-    public double getValue() {
-        return value;
+    public double getPrix() {
+        return prix;
     }
 
-    public void setValue(double value) {
-        this.value = value;
+    public void setPrix(double prix) {
+        this.prix = prix;
     }
 
 }

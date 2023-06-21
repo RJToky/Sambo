@@ -9,7 +9,6 @@ import util.ObjectBase;
 public class Escale extends ObjectBase<Escale> {
     private String id;
     private String id_navire;
-    private String id_quai;
     private String date_entree;
     private String date_sortie;
 
@@ -31,9 +30,8 @@ public class Escale extends ObjectBase<Escale> {
         }
     }
 
-    public Escale(String id_navire, String id_quai, String date_entree, String date_sortie) {
+    public Escale(String id_navire, String date_entree, String date_sortie) {
         this.id_navire = id_navire;
-        this.id_quai = id_quai;
         this.date_entree = date_entree;
         this.date_sortie = date_sortie;
     }
@@ -55,14 +53,6 @@ public class Escale extends ObjectBase<Escale> {
 
     public void setId_navire(String id_navire) {
         this.id_navire = id_navire;
-    }
-
-    public String getId_quai() {
-        return id_quai;
-    }
-
-    public void setId_quai(String id_quai) {
-        this.id_quai = id_quai;
     }
 
     public String getDate_entree() {

@@ -9,9 +9,7 @@ import java.util.ArrayList;
 public class Prestation extends ObjectBase<Prestation> {
     private String id;
     private String nom_prestation;
-    private double ariary;
-    private double euro;
-    private int lineaire_apartir;
+    private String seuil;
     private int tranche;
 
     public static ArrayList<Prestation> findAll() throws Exception {
@@ -39,28 +37,12 @@ public class Prestation extends ObjectBase<Prestation> {
         this.nom_prestation = nom_prestation;
     }
 
-    public double getAriary() {
-        return ariary;
+    public String getSeuil() {
+        return seuil;
     }
 
-    public void setAriary(double ariary) {
-        this.ariary = ariary;
-    }
-
-    public double getEuro() {
-        return euro;
-    }
-
-    public void setEuro(double euro) {
-        this.euro = euro;
-    }
-
-    public int getLineaire_apartir() {
-        return lineaire_apartir;
-    }
-
-    public void setLineaire_apartir(int lineaire_apartir) {
-        this.lineaire_apartir = lineaire_apartir;
+    public void setSeuil(String seuil) {
+        this.seuil = seuil;
     }
 
     public int getTranche() {

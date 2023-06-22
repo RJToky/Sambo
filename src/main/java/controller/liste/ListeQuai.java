@@ -12,11 +12,11 @@ import java.util.ArrayList;
 public class ListeQuai extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            ArrayList<Quai> allQuais = new Quai().findAll();
+            ArrayList<Quai> allQuais = Quai.findAll();
             request.setAttribute("allQuais", allQuais);
             request.setAttribute("link", "liste");
             request.setAttribute("page", "liste_quai");
-            request.getRequestDispatcher("index.jsp").forward(request, response);
+            request.getRequestDispatcher("accueil.jsp").forward(request, response);
         } catch (Exception e) {
             e.printStackTrace();
         }

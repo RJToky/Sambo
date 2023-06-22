@@ -20,7 +20,7 @@ public class FormInsertNavire extends HttpServlet {
             request.setAttribute("allPavillons", allPavillons);
             request.setAttribute("link", "inserer");
             request.setAttribute("page", "form_insert_navire");
-            request.getRequestDispatcher("index.jsp").forward(request, response);
+            request.getRequestDispatcher("accueil.jsp").forward(request, response);
         } catch (Exception e) {
             e.printStackTrace();
         }

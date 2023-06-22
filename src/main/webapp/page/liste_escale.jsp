@@ -10,26 +10,18 @@
         <thead>
             <tr>
                 <th>id_escale</th>
-                <th>id_quai</th>
                 <th>id_navire</th>
                 <th>entree</th>
                 <th>sortie</th>
-<%--                <th>cout (Ar)</th>--%>
-<%--                <th>cout (Dollar)</th>--%>
-<%--                <th>Etat</th>--%>
             </tr>
         </thead>
         <tbody>
             <% for (Escale escale : allEscales) { %>
             <tr>
                 <td><%= escale.getId() %></td>
-                <td><%= escale.getId_quai() %></td>
                 <td><%= escale.getId_navire() %></td>
                 <td><%= escale.getDate_entree() %></td>
                 <td><%= escale.getDate_sortie() %></td>
-<%--                <td>20000</td>--%>
-<%--                <td>100</td>--%>
-<%--                <td>sur place</td>--%>
             </tr>
             <% } %>
         </tbody>

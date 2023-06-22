@@ -20,6 +20,19 @@ public class Prestation_escale extends ObjectBase<Prestation_escale> {
         }
     }
 
+    public Prestation_escale(String id_escale, String id_quai, String id_prestation, String debut, String fin,
+            int etat) {
+        this.id_escale = id_escale;
+        this.id_quai = id_quai;
+        this.id_prestation = id_prestation;
+        this.debut = debut;
+        this.fin = fin;
+        this.etat = etat;
+    }
+
+    public Prestation_escale() {
+    }
+
     public String getId() {
         return id;
     }

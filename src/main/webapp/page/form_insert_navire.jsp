@@ -17,7 +17,7 @@
             <label for="type_navire">type_navire</label>
             <select name="id_type_navire" id="type_navire" required>
                 <% for (Type_navire type_navire : allType_navires) { %>
-                    <option value="<%= type_navire.getId() %>"><%= type_navire.getType() %></option>
+                    <option value="<%= type_navire.getId() %>"><%= type_navire.getNom_type() %></option>
                 <% } %>
             </select>
         </div>

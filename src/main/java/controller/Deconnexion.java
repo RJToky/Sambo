@@ -1,4 +1,4 @@
-package controller.inserer;
+package controller;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
@@ -6,16 +6,11 @@ import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 
-@WebServlet(name = "FormInsertQuai", value = "/FormInsertQuai")
-public class FormInsertQuai extends HttpServlet {
+@WebServlet(name = "Deconnexion", value = "/Deconnexion")
+public class Deconnexion extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try {
-            request.setAttribute("link", "inserer");
-            request.setAttribute("page", "form_insert_quai");
-            request.getRequestDispatcher("accueil.jsp").forward(request, response);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        request.getSession().invalidate();
+        response.sendRedirect("ControllerProfil");
     }
 
     @Override

@@ -42,7 +42,7 @@ public class Quai extends ObjectBase<Quai> {
         }
     }
 
-    public ArrayList<Quai> findAll() throws Exception {
+    public static ArrayList<Quai> findAll() throws Exception {
         try (Connection co = ConnectionPostgres.getConnection()) {
             return new Quai().findAll(co);
         }

@@ -16,7 +16,7 @@ public class ListeEscale extends HttpServlet {
             request.setAttribute("allEscales", allEscales);
             request.setAttribute("link", "liste");
             request.setAttribute("page", "liste_escale");
-            request.getRequestDispatcher("index.jsp").forward(request, response);
+            request.getRequestDispatcher("accueil.jsp").forward(request, response);
         } catch (Exception e) {
             e.printStackTrace();
         }

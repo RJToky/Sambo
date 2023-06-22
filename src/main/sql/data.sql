@@ -65,6 +65,7 @@ insert into tarif values
     (default, 'prestation_001', 'pavillon_001', 'type_navire_001', 'quai_001', 135, 150, 42000.0),
     (default, 'prestation_001', 'pavillon_001', 'type_navire_001', 'quai_001', 150, 165, 45000.0),
     (default, 'prestation_001', 'pavillon_001', 'type_navire_001', 'quai_001', 165, 180, 55000.0),
+    (default, 'prestation_001', 'pavillon_001', 'type_navire_001', 'quai_001', null, null, 12000.0),
 
     --------------------- STATIONNEMENT / NATIONAL / Petrolier / Quai A ---------------------
     (default, 'prestation_001', 'pavillon_001', 'type_navire_001', 'quai_001', 0, 15, 10000.0),
@@ -79,6 +80,7 @@ insert into tarif values
     (default, 'prestation_001', 'pavillon_001', 'type_navire_001', 'quai_001', 135, 150, 32000.0),
     (default, 'prestation_001', 'pavillon_001', 'type_navire_001', 'quai_001', 150, 165, 33000.0),
     (default, 'prestation_001', 'pavillon_001', 'type_navire_001', 'quai_001', 165, 180, 40000.0),
+    (default, 'prestation_001', 'pavillon_001', 'type_navire_001', 'quai_001', null, null, 11000.0),
 
     --------------------- STATIONNEMENT / NATIONAL / Petrolier / Quai B ---------------------
     (default, 'prestation_001', 'pavillon_001', 'type_navire_001', 'quai_002', 0, 15, 10000.0),
@@ -93,6 +95,7 @@ insert into tarif values
     (default, 'prestation_001', 'pavillon_001', 'type_navire_001', 'quai_002', 135, 150, 29000.0),
     (default, 'prestation_001', 'pavillon_001', 'type_navire_001', 'quai_002', 150, 165, 30000.0),
     (default, 'prestation_001', 'pavillon_001', 'type_navire_001', 'quai_002', 165, 180, 32000.0),
+    (default, 'prestation_001', 'pavillon_001', 'type_navire_001', 'quai_002', null, null, 12000.0),
 
     --------------------- STATIONNEMENT / NATIONAL / Petrolier / Quai B ---------------------
     (default, 'prestation_001', 'pavillon_001', 'type_navire_001', 'quai_002', 0, 15, 10000.0),
@@ -107,6 +110,7 @@ insert into tarif values
     (default, 'prestation_001', 'pavillon_001', 'type_navire_001', 'quai_002', 135, 150, 38000.0),
     (default, 'prestation_001', 'pavillon_001', 'type_navire_001', 'quai_002', 150, 165, 39000.0),
     (default, 'prestation_001', 'pavillon_001', 'type_navire_001', 'quai_002', 165, 180, 40000.0),
+    (default, 'prestation_001', 'pavillon_001', 'type_navire_001', 'quai_002', null, null, 9000.0),
 
     --------------------- STATIONNEMENT / NATIONAL / Paquebot / Quai A ---------------------
     (default, 'prestation_001', 'pavillon_001', 'type_navire_002', 'quai_001', 0, 15, 10000.0),
@@ -121,6 +125,7 @@ insert into tarif values
     (default, 'prestation_001', 'pavillon_001', 'type_navire_002', 'quai_001', 135, 150, 32000.0),
     (default, 'prestation_001', 'pavillon_001', 'type_navire_002', 'quai_001', 150, 165, 35000.0),
     (default, 'prestation_001', 'pavillon_001', 'type_navire_002', 'quai_001', 165, 180, 42000.0),
+    (default, 'prestation_001', 'pavillon_001', 'type_navire_002', 'quai_001', null, null, 14000.0),
 
     --------------------- STATIONNEMENT / NATIONAL / Paquebot / Quai A ---------------------
     (default, 'prestation_001', 'pavillon_001', 'type_navire_002', 'quai_001', 0, 15, 10000.0),
@@ -135,6 +140,7 @@ insert into tarif values
     (default, 'prestation_001', 'pavillon_001', 'type_navire_002', 'quai_001', 135, 150, 40000.0),
     (default, 'prestation_001', 'pavillon_001', 'type_navire_002', 'quai_001', 150, 165, 45000.0),
     (default, 'prestation_001', 'pavillon_001', 'type_navire_002', 'quai_001', 165, 180, 47000.0),
+    (default, 'prestation_001', 'pavillon_001', 'type_navire_002', 'quai_001', null, null, 17000.0),
 
     --------------------- STATIONNEMENT / NATIONAL / Paquebot / Quai B ---------------------
     (default, 'prestation_001', 'pavillon_001', 'type_navire_002', 'quai_002', 0, 15, 10000.0),
@@ -149,6 +155,7 @@ insert into tarif values
     (default, 'prestation_001', 'pavillon_001', 'type_navire_002', 'quai_002', 135, 150, 40000.0),
     (default, 'prestation_001', 'pavillon_001', 'type_navire_002', 'quai_002', 150, 165, 45000.0),
     (default, 'prestation_001', 'pavillon_001', 'type_navire_002', 'quai_002', 165, 180, 46000.0),
+    (default, 'prestation_001', 'pavillon_001', 'type_navire_002', 'quai_002', null, null, 16000.0),
 
     --------------------- STATIONNEMENT / NATIONAL / Paquebot / Quai B ---------------------
     (default, 'prestation_001', 'pavillon_001', 'type_navire_002', 'quai_002', 0, 15, 10000.0),
@@ -163,6 +170,7 @@ insert into tarif values
     (default, 'prestation_001', 'pavillon_001', 'type_navire_002', 'quai_002', 135, 150, 30000.0),
     (default, 'prestation_001', 'pavillon_001', 'type_navire_002', 'quai_002', 150, 165, 35000.0),
     (default, 'prestation_001', 'pavillon_001', 'type_navire_002', 'quai_002', 165, 180, 40000.0),
+    (default, 'prestation_001', 'pavillon_001', 'type_navire_002', 'quai_002', null, null, 12000.0),
 
     --------------------- STATIONNEMENT / INTERNATIONAL / Petrolier / Quai A ---------------------
     (default, 'prestation_001', 'pavillon_002', 'type_navire_001', 'quai_001', 0, 15, 10000.0),
@@ -177,6 +185,7 @@ insert into tarif values
     (default, 'prestation_001', 'pavillon_002', 'type_navire_001', 'quai_001', 135, 150, 42000.0),
     (default, 'prestation_001', 'pavillon_002', 'type_navire_001', 'quai_001', 150, 165, 45000.0),
     (default, 'prestation_001', 'pavillon_002', 'type_navire_001', 'quai_001', 165, 180, 55000.0),
+    (default, 'prestation_001', 'pavillon_002', 'type_navire_001', 'quai_001', null, null, 15000.0),
 
     --------------------- STATIONNEMENT / INTERNATIONAL / Petrolier / Quai A ---------------------
     (default, 'prestation_001', 'pavillon_002', 'type_navire_001', 'quai_001', 0, 15, 10000.0),
@@ -191,6 +200,7 @@ insert into tarif values
     (default, 'prestation_001', 'pavillon_002', 'type_navire_001', 'quai_001', 135, 150, 32000.0),
     (default, 'prestation_001', 'pavillon_002', 'type_navire_001', 'quai_001', 150, 165, 33000.0),
     (default, 'prestation_001', 'pavillon_002', 'type_navire_001', 'quai_001', 165, 180, 40000.0),
+    (default, 'prestation_001', 'pavillon_002', 'type_navire_001', 'quai_001', null, null, 14000.0),
 
     --------------------- STATIONNEMENT / INTERNATIONAL / Petrolier / Quai B ---------------------
     (default, 'prestation_001', 'pavillon_002', 'type_navire_001', 'quai_002', 0, 15, 10000.0),
@@ -205,6 +215,7 @@ insert into tarif values
     (default, 'prestation_001', 'pavillon_002', 'type_navire_001', 'quai_002', 135, 150, 29000.0),
     (default, 'prestation_001', 'pavillon_002', 'type_navire_001', 'quai_002', 150, 165, 30000.0),
     (default, 'prestation_001', 'pavillon_002', 'type_navire_001', 'quai_002', 165, 180, 32000.0),
+    (default, 'prestation_001', 'pavillon_002', 'type_navire_001', 'quai_002', null, null, 12000.0),
 
     --------------------- STATIONNEMENT / INTERNATIONAL / Petrolier / Quai B ---------------------
     (default, 'prestation_001', 'pavillon_002', 'type_navire_001', 'quai_002', 0, 15, 10000.0),
@@ -219,6 +230,7 @@ insert into tarif values
     (default, 'prestation_001', 'pavillon_002', 'type_navire_001', 'quai_002', 135, 150, 38000.0),
     (default, 'prestation_001', 'pavillon_002', 'type_navire_001', 'quai_002', 150, 165, 39000.0),
     (default, 'prestation_001', 'pavillon_002', 'type_navire_001', 'quai_002', 165, 180, 40000.0),
+    (default, 'prestation_001', 'pavillon_002', 'type_navire_001', 'quai_002', null, null, 14000.0),
 
     --------------------- STATIONNEMENT / INTERNATIONAL / Paquebot / Quai A ---------------------
     (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_001', 0, 15, 10000.0),
@@ -232,7 +244,7 @@ insert into tarif values
     (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_001', 120, 135, 29000.0),
     (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_001', 135, 150, 32000.0),
     (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_001', 150, 165, 35000.0),
-    (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_001', 165, 180, 42000.0),
+    (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_001', null, null, 12000.0),
 
     --------------------- STATIONNEMENT / INTERNATIONAL / Paquebot / Quai A ---------------------
     (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_001', 0, 15, 10000.0),
@@ -246,7 +258,7 @@ insert into tarif values
     (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_001', 120, 135, 39000.0),
     (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_001', 135, 150, 40000.0),
     (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_001', 150, 165, 45000.0),
-    (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_001', 165, 180, 47000.0),
+    (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_001', null, null, 17000.0),
 
     --------------------- STATIONNEMENT / INTERNATIONAL / Paquebot / Quai B ---------------------
     (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_002', 0, 15, 10000.0),
@@ -260,7 +272,7 @@ insert into tarif values
     (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_002', 120, 135, 39000.0),
     (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_002', 135, 150, 40000.0),
     (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_002', 150, 165, 45000.0),
-    (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_002', 165, 180, 46000.0),
+    (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_002', null, null, 16000.0),
 
     --------------------- STATIONNEMENT / INTERNATIONAL / Paquebot / Quai B ---------------------
     (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_002', 0, 15, 10000.0),
@@ -274,7 +286,7 @@ insert into tarif values
     (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_002', 120, 135, 29000.0),
     (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_002', 135, 150, 30000.0),
     (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_002', 150, 165, 35000.0),
-    (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_002', 165, 180, 40000.0),
+    (default, 'prestation_001', 'pavillon_002', 'type_navire_002', 'quai_002', null, null, 10000.0),
 
 
 

@@ -44,14 +44,6 @@
                             </ul>
                         </div>
                     </li>
-
-                    <% if (link.equalsIgnoreCase("escale")) { %>
-                    <li class="active">
-                            <% } else { %>
-                    <li>
-                        <% } %>
-                        <a href="${pageContext.request.contextPath}/Escale">Escale</a><span></span>
-                    </li>
                     <li>
                         <a href="${pageContext.request.contextPath}/Deconnexion">Deconnexion</a><span></span>
                     </li>
@@ -76,6 +68,9 @@
 
             <% } else if (_page.equalsIgnoreCase("form_insert_escale")) { %>
             <%@ include file="page/form_insert_escale.jsp" %>
+
+            <% } else if (_page.equalsIgnoreCase("liste_prestation_escale")) { %>
+            <%@ include file="page/liste_prestation_escale.jsp" %>
             <% } %>
         </main>
     </body>

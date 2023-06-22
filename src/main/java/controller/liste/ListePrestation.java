@@ -1,22 +1,21 @@
-package controller.inserer;
+package controller.liste;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
-import model.Navire;
+import model.V_prestation_escale;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-@WebServlet(name = "FormInsertEscale", value = "/FormInsertEscale")
-public class FormInsertEscale extends HttpServlet {
+@WebServlet(name = "ListePrestation", value = "/ListePrestation")
+public class ListePrestation extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            ArrayList<Navire> allNavires = Navire.findAll();
-
-            request.setAttribute("allNavires", allNavires);
-            request.setAttribute("link", "inserer");
-            request.setAttribute("page", "form_insert_escale");
+            ArrayList<V_prestation_escale> allPrestation_escales = V_prestation_escale.findAll();
+            request.setAttribute("allPrestation_escales", allPrestation_escales);
+            request.setAttribute("link", "liste");
+            request.setAttribute("page", "liste_prestation_escale");
             request.getRequestDispatcher("accueil.jsp").forward(request, response);
         } catch (Exception e) {
             e.printStackTrace();

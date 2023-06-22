@@ -13,6 +13,8 @@
                 <th>id_navire</th>
                 <th>entree</th>
                 <th>sortie</th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +24,8 @@
                 <td><%= escale.getId_navire() %></td>
                 <td><%= escale.getDate_entree() %></td>
                 <td><%= escale.getDate_sortie() %></td>
+                <td><a href="${pageContext.request.contextPath}/ListePrestation?id_escale=<%= escale.getId() %>" style="color: #2ca8b1;">Prestation</a></td>
+                <td><a href="${pageContext.request.contextPath}/ListeFacture?id_escale=<%= escale.getId() %>" style="color: #2ca8b1;">Facture</a></td>
             </tr>
             <% } %>
         </tbody>

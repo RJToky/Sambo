@@ -1,26 +1,15 @@
-package controller.inserer;
+package controller.liste;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
-import model.Navire;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
-@WebServlet(name = "FormInsertEscale", value = "/FormInsertEscale")
-public class FormInsertEscale extends HttpServlet {
+@WebServlet(name = "ListeFacture", value = "/ListeFacture")
+public class ListeFacture extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try {
-            ArrayList<Navire> allNavires = Navire.findAll();
 
-            request.setAttribute("allNavires", allNavires);
-            request.setAttribute("link", "inserer");
-            request.setAttribute("page", "form_insert_escale");
-            request.getRequestDispatcher("accueil.jsp").forward(request, response);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     @Override

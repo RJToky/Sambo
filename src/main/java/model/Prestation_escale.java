@@ -1,6 +1,7 @@
 package model;
 
 import java.sql.Connection;
+import java.util.ArrayList;
 
 import util.ConnectionPostgres;
 import util.ObjectBase;
@@ -13,6 +14,12 @@ public class Prestation_escale extends ObjectBase<Prestation_escale> {
     private String debut;
     private String fin;
     private int etat;
+
+    public static ArrayList<Prestation_escale> findAll() throws Exception {
+        try (Connection co = ConnectionPostgres.getConnection()) {
+            return new Prestation_escale().findAll(co);
+        }
+    }
 
     public void insertPrestation_escale() throws Exception {
         try (Connection co = ConnectionPostgres.getConnection()) {

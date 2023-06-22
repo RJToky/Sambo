@@ -1,10 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="model.Navire" %>
-<%@ page import="model.Quai" %>
 <%
     ArrayList<Navire> allNavires = (ArrayList<Navire>) request.getAttribute("allNavires");
-    ArrayList<Quai> allQuais = (ArrayList<Quai>) request.getAttribute("allQuais");
 %>
 <h1>Ajouter escale</h1>
 <div class="container">
@@ -18,22 +16,8 @@
             </select>
         </div>
         <div class="field">
-            <label for="nom_quai">nom_quai</label>
-            <select name="id_quai" id="nom_quai" required>
-                <% for (Quai quai : allQuais) { %>
-                <option value="<%= quai.getId() %>"><%= quai.getNom_quai() %></option>
-                <% } %>
-            </select>
-        </div>
-        <div class="date">
-            <div class="field">
-                <label for="date_entree">Date d'entrée</label>
-                <input type="datetime-local" name="date_entree" id="date_entree" required>
-            </div>
-            <div class="field">
-                <label for="date_sortie">Date de sortie</label>
-                <input type="datetime-local" name="date_sortie" id="date_sortie">
-            </div>
+            <label for="date_entree">Date d'entrée</label>
+            <input type="datetime-local" name="date_entree" id="date_entree" required>
         </div>
         <div class="field">
             <button>Valider</button>
@@ -57,12 +41,6 @@
         flex-direction: column;
         gap: 2em;
         width: clamp(380px, 45%, 80%);
-    }
-
-    .container form .date {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2em;
     }
 
     .container form .field {
